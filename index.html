@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OUVIDORIA HEV</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="//digitalfortress.tech/js/top-15-commonly-used-regex/"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon">
+
+    <style>
+        body {
+            background: linear-gradient(#1cb097 #01afde) ;
+        }
+    </style>
+</head>
+<body>
+    <form id="survey-form" action="https://api.sheetmonkey.io/form/dKn58fKJqvfsn3tcPYfuNA" method="post">
+        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+        <h1 id="title"> OUVIDORIA HEV </h1>
+        <p id="description">NOS AJUDE A MELHORAR NOSSOS SERVIÇOS RESPONDENDO ESSAS RÁPIDAS PERGUNTAS</p>
+        <fieldset>
+
+            <h3>Dados do usuário</h3>
+            <div class="box">
+                <label id="name-label">Nome: <input id="name" type="text" placeholder="Nome e sobrenome" name="nome"
+                        style="color: black;" required></input></label>
+            </div>
+            <div class="box">
+                <label id="email-label">Email: <input id="email" type="email" placeholder="code@email.com" name="email"
+                        style="color: black;" required
+                        pattern="^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$"></input></label>
+            </div>
+            <div class="box">
+                <label id="number-label">Idade: <input id="number" type="number" name="idade" min="18" max="120"
+                        style="color: black;" placeholder="18 - 120" required></input></label>
+            </div>
+            <div class="box">
+                <label id="sexo">Sexo:<required>
+                        <select name="" id="drop" name="sexo" style="background-color: rgba(255, 255, 255, 0.753);">
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                        </select>
+            </div>
+            </label>
+            <div class="container" style="padding: 2rem 6px;">
+                <H2>AVALIE NOSSO SERVIÇO COM UMA NOTA DE SATISFAÇÃO ENTRE 1 E 5</H2><br>
+                <div>
+                    <label for="range1">Você sente que o hospital está oferecendo o melhor cuidado possível ao paciente? </label>
+                    <input type="range" name="Você sente que o hospital está oferecendo o melhor cuidado possível ao paciente?" id="range1" min="1" max="5" value="3"
+                        onchange="document.getElementById('out1') .value=value">
+                    <output id="out1" name="out" for="range1"> </output>
+                </div><br>
+                <div>
+                    <label for="range2">Você sente que os colaboradores estão de fato se importando com o paciente?</label>
+                    <input type="range" name="Você sente que os colaboradores estão de fato se importando com o paciente?" id="range2" min="1" max="5" value="3"
+                        onchange="document.getElementById('out2') .value=value">
+                    <output id="out2" name="out" for="range2"> </output>
+                </div><br>
+                <div>
+                    <label for="range3">Os termos utilizados pela equipe na hora da explicação do quadro clínico do paciente são fáceis de entender?</label>
+                    <input type="range" name="Os termos utilizados pela equipe na hora da explicação do quadro clínico do paciente são fáceis de entender?" id="range3" min="1" max="5" value="3"
+                        onchange="document.getElementById('out3') .value=value">
+                    <output id="out3" name="out" for="range3"> </output>
+                </div><br>
+                <div>
+                    <label for="range4">Você conseguiu entender o que está acontecendo com o paciente, os procedimentos que são realizados nele e o porquê?</label>
+                    <input type="range" name="Você conseguiu entender o que está acontecendo com o paciente, os procedimentos que são realizados nele e o porquê?" id="range4" min="1" max="5"
+                        onchange="document.getElementById('out4') .value=value">
+                    <output id="out4" name="out" for="range4"> </output>
+                </div><br>
+                <div>
+                    <label for="range5">Você acredita que o hospital te ligaria para informar sobre alterações no estado clínico do paciente? </label>
+                    <input type="range" name="Você acredita que o hospital te ligaria para informar sobre alterações no estado clínico do paciente? " id="range5" min="1" max="5"
+                        onchange="document.getElementById('out5') .value=value">
+                    <output id="out5" name="out" for="range5"> </output>
+                </div>
+                <div> <br>
+                    <label for="range6">Você acredita que existe alguma melhoria a ser feita com relação aos cuidados que o paciente está recebendo na UTI? Se sim, quais?</label>
+                    <input type="range" name="Você acredita que existe alguma melhoria a ser feita com relação aos cuidados que o paciente está recebendo na UTI? Se sim, quais?" id="range5" min="1" max="5"
+                        onchange="document.getElementById('out6') .value=value">
+                    <output id="out6" name="out" for="range6"> </output>
+                </div>
+                <div>
+                    <label for="range7"> <div> <br>
+                        <label for="range7">Em relação a assistência de enfermagem existe alguma melhoria a ser feita? Se sim, qual?</label>
+                        <input type="range" name="Em relação a assistência de enfermagem existe alguma melhoria a ser feita? Se sim, qual?" id="range5" min="1" max="5"
+                            onchange="document.getElementById('out7') .value=value">
+                        <output id="out7" name="out" for="range7"> </output>
+                    </div> <br>
+                    <div>
+                        <label for="range5"> <div>
+                            <label for="range8">Quanto aos serviços de administração de medicações e procedimentos que são feitos pela enfermagem, isso é informado com clareza?</label>
+                            <input type="range" name="Quanto aos serviços de administração de medicações e procedimentos que são feitos pela enfermagem, isso é informado com clareza?" min="1" max="5"
+                                onchange="document.getElementById('out8') .value=value">
+                            <output id="out8" name="out" for="range8"> </output>
+                        </div>
+                    
+            </div>
+
+            <fieldset>
+                <input id="submit" type="submit" onclick="cadastraProduto()" value="Enviar">
+            </fieldset>
+
+    </form>
+
+</body>
+
+</html>
